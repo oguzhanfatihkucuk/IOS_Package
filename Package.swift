@@ -2,24 +2,24 @@
 import PackageDescription
 
 let package = Package(
-    name: "Swift_Package",
+    name: "ExampleSwiftPackage",
     platforms: [
-        .iOS(.v14) // minimum iOS versiyonu
+        .iOS(.v14)
     ],
     products: [
         .library(
-            name: "Swift_Package",
-            targets: ["Swift_Package"]
+            name: "ExampleSwiftPackage",
+            targets: ["ExampleSwiftPackage"]
         ),
     ],
     targets: [
         .target(
-            name: "Swift_Package",
+            name: "ExampleSwiftPackage",
             dependencies: []
         ),
         .testTarget(
-            name: "Swift_PackageTests",
-            dependencies: ["Swift_Package"]
+            name: "ExampleSwiftPackageTests",
+            dependencies: ["ExampleSwiftPackage"]
         ),
     ]
 )
