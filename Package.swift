@@ -1,10 +1,10 @@
-// swift-tools-version: 6.1
+// swift-tools-version: 5.9
 import PackageDescription
 
 let package = Package(
     name: "Swift_Package",
     platforms: [
-        .iOS(.v14) // minimum iOS versiyonunu belirle
+        .iOS(.v14) // minimum iOS versiyonu
     ],
     products: [
         .library(
@@ -13,17 +13,13 @@ let package = Package(
         ),
     ],
     targets: [
-        // Ana target
         .target(
             name: "Swift_Package",
-            dependencies: [
-               
-            ]
+            dependencies: []
         ),
         .testTarget(
             name: "Swift_PackageTests",
             dependencies: ["Swift_Package"]
         ),
-
     ]
 )

@@ -1,6 +1,14 @@
-import Testing
+import XCTest
 @testable import Swift_Package
 
-@Test func example() async throws {
-    // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+final class MyLibraryTests: XCTestCase {
+    func testHello() {
+        let lib = MyLibrary()
+        XCTAssertEqual(lib.hello(), "Hello from Swift_Package 🎉")
+    }
+
+    func testAdd() {
+        let lib = MyLibrary()
+        XCTAssertEqual(lib.add(2, 3), 5)
+    }
 }
